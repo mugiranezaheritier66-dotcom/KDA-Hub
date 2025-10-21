@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KDA School - Kigali Development Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/kda-logo.png" alt="KDA Logo">
+      <h1>Kigali Development Academy</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Kigali Development Academy</h2>
+      <p>Where knowledge, discipline, and excellence meet to shape future leaders.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Kigali Development Academy (KDA) is dedicated to nurturing academic excellence, leadership, and creativity in every student. We aim to provide a supportive environment for holistic development.</p>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="achievements">
+    <h2>Our Achievements</h2>
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <img src="images/academic.jpg" alt="Academic Achievement">
+        <h3>Academic Excellence</h3>
+        <p>Top performance in national examinations with outstanding student results.</p>
+      </div>
+      <div class="achievement-card">
+        <img src="images/sports.jpg" alt="Sports Achievement">
+        <h3>Sports Leadership</h3>
+        <p>Winners of the inter-school football and athletics tournaments 2025.</p>
+      </div>
+      <div class="achievement-card">
+        <img src="images/arts.jpg" alt="Art Achievement">
+        <h3>Arts & Creativity</h3>
+        <p>Students showcased their talents in national art exhibitions and competitions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="School event">
+      <img src="images/gallery2.jpg" alt="Students learning">
+      <img src="images/gallery3.jpg" alt="Science fair">
+      <img src="images/gallery4.jpg" alt="Graduation day">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@kdaschool.rw</p>
+    <p>Phone: +250 788 123 456</p>
+    <p>Location: Kigali, Rwanda</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kigali Development Academy | Designed by KDA Tech Club</p>
+  </footer>
+</body>
+</html>
+🎨 style.css
+css
+Copy code
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+  background: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 25px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/school-building.jpg') center/cover no-repeat;
+  color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #004080;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #ffe680;
+}
+
+/* About */
+.about, .achievements, .gallery, .contact {
+  padding: 50px 80px;
+  text-align: center;
+}
+.about h2, .achievements h2, .gallery h2, .contact h2 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* Achievements */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.achievement-card {
+  background: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.achievement-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.achievement-card h3 {
+  margin: 10px 0;
+  color: #004080;
+}
+.achievement-card p {
+  padding: 0 15px 20px;
+  color: #333;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Contact */
+.contact p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* Footer */
+footer {
+  background: #002b5c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
